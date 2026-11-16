@@ -1,0 +1,15 @@
+{
+  "name": "mahadev-ashram-trust",
+  "version": "1.0.0",
+  "description": "Mahadev Ashram Charitable Trust Website",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "jimp": "^1.6.1",
+    "jsqr": "^1.4.0"
+  }
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work & Ground Seva | Mahadev Ashram Charitable Trust</title>
+  <meta name="description" content="Explore the charitable initiatives of Mahadev Ashram Charitable Trust in Noida: Free healthcare checkup camps, Vidya school supplies, elderly ration support, and 24x7 Kanwar pilgrim seva.">
+  <meta name="keywords" content="NGO Work Noida, Free medical camps Noida, Vidya scholarship, Kanwar Seva Noida, Food distribution Noida, Women empowerment">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Work & Ground Seva | Mahadev Ashram Charitable Trust">
+  <meta property="og:description" content="Direct, uncompromised grassroots community seva in healthcare, education, elderly support, and pilgrim relief across Noida.">
+  <meta property="og:image" content="assets/images/work/school-group.jpg">
+  <meta property="og:url" content="https://mahadevashramtrust.org/our-work.html">
+
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#f0760f',
+              dark: '#22242b',
+              gray: '#eceff1',
+              charcoal: '#1a1c22'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-orange-500 selection:text-white">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="absolute top-0 left-0 right-0 z-40 py-5 px-4 sm:px-8 lg:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo & Branding -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden p-0.5 bg-white shadow-lg transition transform group-hover:scale-105">
+          <img src="assets/images/logo.png" alt="Mahadev Ashram Logo" class="w-full h-full object-cover rounded-full">
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-extrabold text-base sm:text-lg lg:text-xl text-white tracking-wider uppercase drop-shadow-md">MAHADEV ASHRAM</span>
+          </div>
+          <p class="text-[10px] sm:text-[11px] font-semibold text-orange-400 tracking-wider uppercase drop-shadow">Registered Trust • Noida (U.P.)</p>
+        </div>
+      </a>
+
+      <!-- Right Header Controls -->
+      <div class="flex items-center gap-4">
+        <a href="donation.html" class="btn-primary-orange shadow-lg">
+          DONATE
+        </a>
+
+        <!-- Circular Hamburger Button -->
+        <button id="hamburger-btn" aria-label="Toggle Navigation Menu" class="btn-hamburger-circle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== OFF-CANVAS SLIDE-OUT MENU DRAWER ==================== -->
+  <div id="drawer-overlay" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="nav-drawer" class="fixed top-0 right-0 bottom-0 w-80 sm:w-96 bg-white z-50 shadow-2xl p-6 sm:p-8 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-slate-100">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Logo" class="w-10 h-10 rounded-full border border-orange-200">
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm tracking-wide">MAHADEV ASHRAM</h4>
+            <p class="text-[10px] text-orange-600 font-semibold tracking-wider uppercase">Charitable Trust</p>
+          </div>
+        </div>
+        <button id="drawer-close" aria-label="Close Menu" class="p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-2 mt-6">
+        <a href="index.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">HOME</a>
+        <a href="about.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">ABOUT US</a>
+        <a href="our-work.html" class="drawer-nav-link text-sm font-bold text-orange-600 bg-orange-50 py-2.5 px-3 rounded-lg transition">OUR WORK & INITIATIVES</a>
+        <a href="our-member.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">OUR MEMBERS & TRUSTEES</a>
+        <a href="donation.html" class="drawer-nav-link text-sm font-bold text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">DONATE ONLINE (UPI/BANK)</a>
+        <a href="contact.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">CONTACT US</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+      <a href="donation.html" class="w-full text-center py-3 rounded-md font-bold text-xs text-white bg-orange-600 hover:bg-orange-700 uppercase tracking-wider shadow">
+        Donate Online
+      </a>
+      <button onclick="openModal('volunteer-modal')" class="w-full text-center py-2.5 rounded-md font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 text-xs uppercase tracking-wider">
+        Join as Volunteer
+      </button>
+      <div class="text-center text-xs text-slate-500 mt-2">
+        Direct Helpline: <a href="tel:+919910750090" class="text-orange-600 font-bold">+91 99107 50090</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SUBPAGE HERO BANNER ==================== -->
+  <section class="relative pt-36 pb-20 sm:pt-44 sm:pb-28 page-hero-banner" style="background-image: url('assets/images/work/school-group.jpg');">
+    <div class="absolute inset-0 page-hero-overlay"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 text-white">
+      
+      <!-- Breadcrumbs -->
+      <div class="flex items-center gap-2 text-xs font-semibold text-orange-400 uppercase tracking-wider mb-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <span>/</span>
+        <span class="text-slate-300">Our Work</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-hero-serif leading-tight max-w-3xl">
+        Grassroots Seva & Community Action
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-slate-200 max-w-2xl font-normal leading-relaxed">
+        From free rural medical checkup camps to child literacy scholarships, elderly nutrition, and round-the-clock pilgrim relief in Noida.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ==================== INITIATIVES SECTION WITH FILTER TABS ==================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      
+      <!-- Header & Filter Tabs -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 sm:mb-16 pb-8 border-b border-slate-200">
+        <div>
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-orange-100 text-orange-700 mb-3">
+            SEVA PROGRAM PORTFOLIO
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-hero-serif text-slate-900">
+            Active Community Programs
+          </h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button class="filter-tab-btn active" data-filter="all">All Initiatives</button>
+          <button class="filter-tab-btn" data-filter="health">Healthcare</button>
+          <button class="filter-tab-btn" data-filter="education">Vidya Education</button>
+          <button class="filter-tab-btn" data-filter="elderly">Elderly Care</button>
+          <button class="filter-tab-btn" data-filter="kanwar">Kanwar Seva</button>
+          <button class="filter-tab-btn" data-filter="women">Women Welfare</button>
+        </div>
+      </div>
+
+      <!-- Initiatives Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 items-stretch">
+        
+        <!-- 1. Healthcare Camp -->
+        <div class="work-item-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-category="health">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/images/work/medical-camp.webp" alt="Free Medical Camp in Noida" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 text-[11px] font-bold tracking-wider uppercase bg-emerald-600 text-white px-3 py-1 rounded-full shadow">
+                Healthcare Camp
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">
+                Free Community Medical & Eye Camps
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                Conducting scheduled health clinics in peri-urban slums and rural Noida. Qualified volunteer physicians provide primary consultations, vitals monitoring, diabetes/BP checkups, and free generic medications.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100">
+                <li>• Free prescription medicines provided</li>
+                <li>• Specialized pediatric and geriatric care</li>
+                <li>• Preventative health hygiene education</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="donation.html" class="block w-full text-center py-2.5 rounded font-bold text-xs uppercase tracking-wider text-orange-600 bg-orange-50 hover:bg-orange-600 hover:text-white transition">
+              Sponsor A Medical Kit →
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Vidya School Education -->
+        <div class="work-item-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-category="education">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/images/work/children-reading.jpg" alt="Underprivileged children studying" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 text-[11px] font-bold tracking-wider uppercase bg-blue-600 text-white px-3 py-1 rounded-full shadow">
+                Vidya Initiative
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">
+                Vidya Scholarship & Study Kit Distribution
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                Ensuring no child drops out due to lack of study supplies. We distribute complete educational backpacks, notebook sets, geometry boxes, and seasonal school uniforms to students from daily wage families.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100">
+                <li>• Full school supplies kit per student</li>
+                <li>• Focus on girl child literacy & retention</li>
+                <li>• Evening community tuition circles</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="donation.html" class="block w-full text-center py-2.5 rounded font-bold text-xs uppercase tracking-wider text-orange-600 bg-orange-50 hover:bg-orange-600 hover:text-white transition">
+              Sponsor A Child's Vidya (₹1,100) →
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Elderly Care & Ration -->
+        <div class="work-item-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-category="elderly">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/images/work/elderly-care.jpg" alt="Elderly care and ration kits" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 text-[11px] font-bold tracking-wider uppercase bg-amber-600 text-white px-3 py-1 rounded-full shadow">
+                Elderly Welfare
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">
+                Monthly Ration & Dignity for Seniors
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                Standing beside destitute seniors, widows, and persons with disabilities. We provide recurring monthly dry rations (atta, dal, rice, mustard oil, tea) along with essential winter blankets and compassionate companionship.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100">
+                <li>• Monthly survival grocery hampers</li>
+                <li>• Essential chronic medication assistance</li>
+                <li>• Dignity visits by youth volunteers</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="donation.html" class="block w-full text-center py-2.5 rounded font-bold text-xs uppercase tracking-wider text-orange-600 bg-orange-50 hover:bg-orange-600 hover:text-white transition">
+              Sponsor Senior Ration (₹2,500) →
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Kanwar Pilgrim Seva 24x7 -->
+        <div class="work-item-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-category="kanwar">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/images/work/kanwar-camp-1.jpg" alt="Kanwar Seva Camp in Noida" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 text-[11px] font-bold tracking-wider uppercase bg-orange-600 text-white px-3 py-1 rounded-full shadow">
+                24x7 Kanwar Seva
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">
+                24x7 Kanwar Pilgrim Shelter & Annadanam
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                During the month of Shravan, running round-the-clock rest camps on the Noida pilgrimage route. We provide nutritious hot meals (bhandara), clean water, blister foot care, antiseptic dressings, and massage reflexology.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100">
+                <li>• Over 15,000 pilgrims served annually</li>
+                <li>• Dedicated first-aid and medical staff</li>
+                <li>• Hygienic 24-hour food distribution</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="donation.html" class="block w-full text-center py-2.5 rounded font-bold text-xs uppercase tracking-wider text-orange-600 bg-orange-50 hover:bg-orange-600 hover:text-white transition">
+              Support Annadanam Seva →
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Festival Seva & Annadanam -->
+        <div class="work-item-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-category="kanwar">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/images/work/food-serving-1.jpg" alt="Maa Durga & Janmashtami Seva" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 text-[11px] font-bold tracking-wider uppercase bg-red-600 text-white px-3 py-1 rounded-full shadow">
+                Community Feasts
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">
+                Festival Seva & Maa Durga Blessings
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                Celebrating Navratri, Janmashtami, and religious festivals through open community feasts (Halwa & Puri vitran), warm clothes distribution, and sharing joyful devotion with the most vulnerable children and elders.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100">
+                <li>• Pure sattvic freshly cooked prasad</li>
+                <li>• Blankets and clothing drives</li>
+                <li>• Community harmony across all backgrounds</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="donation.html" class="block w-full text-center py-2.5 rounded font-bold text-xs uppercase tracking-wider text-orange-600 bg-orange-50 hover:bg-orange-600 hover:text-white transition">
+              Sponsor A Bhandara Drive →
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Women Empowerment -->
+        <div class="work-item-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-category="women">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/images/work/women-training.jpg" alt="Women vocational tailoring center" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 text-[11px] font-bold tracking-wider uppercase bg-purple-600 text-white px-3 py-1 rounded-full shadow">
+                Women Empowerment
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">
+                Vocational Tailoring & Skill Development
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                Equipping rural and slum women with sewing, tailoring, and handicraft training. By providing vocational skills, we empower mothers and young women to earn an independent livelihood and uplift their families.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 pt-3 border-t border-slate-100">
+                <li>• Free sewing machines upon certification</li>
+                <li>• Self-help group financial literacy</li>
+                <li>• Direct pathway to sustainable income</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="donation.html" class="block w-full text-center py-2.5 rounded font-bold text-xs uppercase tracking-wider text-orange-600 bg-orange-50 hover:bg-orange-600 hover:text-white transition">
+              Empower A Rural Woman →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PHOTO JOURNAL GALLERY ==================== -->
+  <section class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-orange-600">PHOTO ARCHIVE</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-hero-serif text-slate-900 mt-2">
+          Glimpses of Ground Seva in Action
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="rounded-xl overflow-hidden shadow-sm aspect-square bg-slate-200">
+          <img src="assets/images/work/food-serving-2.jpg" alt="Food serving" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-sm aspect-square bg-slate-200">
+          <img src="assets/images/work/kanwar-camp-2.jpg" alt="Kanwar shelter" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-sm aspect-square bg-slate-200">
+          <img src="assets/images/work/kanwar-camp-3.jpg" alt="Medical assistance" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-sm aspect-square bg-slate-200">
+          <img src="assets/images/work/food-serving-3.jpg" alt="Community feast" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-sm aspect-square bg-slate-200">
+          <img src="assets/images/work/team-group.jpg" alt="Trust Seva Volunteers" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-sm aspect-square bg-slate-200">
+          <img src="assets/images/work/kanwar-camp-4.jpg" alt="Pilgrim relief" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-sm aspect-square bg-slate-200">
+          <img src="assets/images/work/education-books.jpg" alt="Vidya books" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-sm aspect-square bg-slate-200">
+          <img src="assets/images/work/hero-classroom.jpg" alt="Classroom learning" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SPLIT FOOTER ==================== -->
+  <footer id="contact" class="bg-brand-dark text-slate-300">
+    <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
+      
+      <!-- Left 50%: Interactive Google Map -->
+      <div class="lg:col-span-6 w-full h-[360px] lg:h-full min-h-[360px] bg-slate-800 relative">
+        <iframe 
+          title="Mahadev Ashram Office Location Sector-115 Noida"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14018.665780517702!2d77.387994!3d28.577239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f15915d6ad%3A0x6b6c0e86b0a8809e!2sSector%20115%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0; min-height: 360px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Right 50%: Dark Contact Us Card -->
+      <div class="lg:col-span-6 p-8 sm:p-12 lg:p-16 flex flex-col justify-between bg-brand-dark relative">
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-8 tracking-wide font-hero-serif">
+            Contact Us
+          </h3>
+          <div class="space-y-6 text-xs sm:text-sm">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              </div>
+              <div>
+                <a href="tel:+919910750090" class="hover:text-white font-medium block">+91 99107 50090</a>
+                <a href="tel:+919990296199" class="hover:text-white font-medium block mt-0.5">+91 99902 96199</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <div>
+                <a href="mailto:connect@mahadevashramtrust.org" class="hover:text-white font-medium">connect@mahadevashramtrust.org</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </div>
+              <div class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Pusta Road, Sainik Vihar, Sector-115, Noida, 201301<br>
+                Reg: Janta Flat, Block-83, House No. 08A, Sector-122, Noida, Uttar Pradesh, INDIA
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media Icons Row -->
+        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <a href="https://wa.me/919910750090" target="_blank" class="w-8 h-8 bg-[#25d366] text-white flex items-center justify-center rounded-sm hover:opacity-90">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            </a>
+            <a href="mailto:connect@mahadevashramtrust.org" class="w-8 h-8 bg-[#dd4b39] text-white flex items-center justify-center rounded-sm hover:opacity-90">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+            </a>
+          </div>
+          <div class="text-[11px] text-slate-400">
+            <a href="privacy.html" class="hover:underline">Privacy</a> • <a href="terms.html" class="hover:underline">Terms</a> • <a href="refund.html" class="hover:underline">Refund Policy</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Sub-Footer Credit Strip -->
+    <div class="bg-black/60 py-3 px-4 text-center text-[10px] text-slate-400 border-t border-slate-900 tracking-wider">
+      Designed for Mahadev Ashram Charitable Trust • Hope For Humanity • All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING ACTIONS ==================== -->
+  <div class="floating-actions-container">
+    <a href="https://wa.me/919910750090?text=Namaste%20Mahadev%20Ashram%20Trust,%20I%20want%20to%20support%20your%20charitable%20work" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="WhatsApp Support" 
+       class="whatsapp-float-btn"
+       title="Chat with us on WhatsApp">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.838.88 2.791.88 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.77-5.768-5.766zm9.969 5.766c0 5.485-4.453 9.938-9.969 9.938-1.748 0-3.376-.46-4.821-1.258l-5.21 1.382 1.396-5.093c-.886-1.498-1.365-3.21-1.365-4.969 0-5.485 4.453-9.938 9.969-9.938 5.516 0 10 4.453 10 9.938z"/></svg>
+    </a>
+
+    <button id="scrollTopBtn" 
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+            aria-label="Scroll to top" 
+            class="scroll-top-btn"
+            title="Back to top">
+      <svg class="w-5 h-5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

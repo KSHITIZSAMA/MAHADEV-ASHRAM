@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation & Refund Policy | Mahadev Ashram Charitable Trust</title>
+  <meta name="description" content="Official Donation, Cancellation and Refund Policy of Mahadev Ashram Charitable Trust, Noida. 100% transparent and donor-centric guidelines.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#f0760f',
+              dark: '#22242b',
+              gray: '#eceff1',
+              charcoal: '#1a1c22'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-orange-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="absolute top-0 left-0 right-0 z-40 py-5 px-4 sm:px-8 lg:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden p-0.5 bg-white shadow-lg transition transform group-hover:scale-105">
+          <img src="assets/images/logo.png" alt="Mahadev Ashram Logo" class="w-full h-full object-cover rounded-full">
+        </div>
+        <div>
+          <span class="font-extrabold text-base sm:text-lg lg:text-xl text-white tracking-wider uppercase drop-shadow-md">MAHADEV ASHRAM</span>
+          <p class="text-[10px] sm:text-[11px] font-semibold text-orange-400 tracking-wider uppercase drop-shadow">Registered Trust • Noida (U.P.)</p>
+        </div>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="donation.html" class="btn-primary-orange shadow-lg">DONATE</a>
+        <button id="hamburger-btn" aria-label="Toggle Navigation Menu" class="btn-hamburger-circle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <div id="drawer-overlay" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="nav-drawer" class="fixed top-0 right-0 bottom-0 w-80 sm:w-96 bg-white z-50 shadow-2xl p-6 sm:p-8 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-slate-100">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Logo" class="w-10 h-10 rounded-full border border-orange-200">
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm tracking-wide">MAHADEV ASHRAM</h4>
+            <p class="text-[10px] text-orange-600 font-semibold tracking-wider uppercase">Charitable Trust</p>
+          </div>
+        </div>
+        <button id="drawer-close" aria-label="Close Menu" class="p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-2 mt-6">
+        <a href="index.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">HOME</a>
+        <a href="about.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">ABOUT US</a>
+        <a href="our-work.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">OUR WORK & INITIATIVES</a>
+        <a href="our-member.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">OUR MEMBERS & TRUSTEES</a>
+        <a href="donation.html" class="drawer-nav-link text-sm font-bold text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">DONATE ONLINE (UPI/BANK)</a>
+        <a href="contact.html" class="drawer-nav-link text-sm font-semibold text-slate-800 hover:text-orange-600 py-2.5 px-3 rounded-lg hover:bg-orange-50 transition">CONTACT US</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+      <a href="donation.html" class="w-full text-center py-3 rounded-md font-bold text-xs text-white bg-orange-600 hover:bg-orange-700 uppercase tracking-wider shadow">Donate Online</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative pt-36 pb-16 sm:pt-40 sm:pb-20 page-hero-banner" style="background-image: url('assets/images/work/volunteers-hero.jpg');">
+    <div class="absolute inset-0 page-hero-overlay"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-8 relative z-10 text-white">
+      <div class="flex items-center gap-2 text-xs font-semibold text-orange-400 uppercase tracking-wider mb-3">
+        <a href="index.html" class="hover:underline">Home</a>
+        <span>/</span>
+        <span class="text-slate-300">Refund Policy</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold font-hero-serif">Donation & Refund Policy</h1>
+      <p class="mt-2 text-sm text-slate-200">Guidelines for charitable contributions</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8 text-slate-700 text-sm sm:text-base leading-relaxed space-y-8">
+      
+      <div>
+        <h2 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">1. Nature of Charitable Contributions</h2>
+        <p>Mahadev Ashram Charitable Trust is a registered non-profit organization operating in Noida, Uttar Pradesh. Donations received through UPI or direct bank transfer are irrevocable voluntary contributions deployed directly for grassroots activities including free medical checkups, children's study supplies, elderly rations, and Kanwar pilgrim food shelters.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">2. Accidental or Duplicate Transfers</h2>
+        <p>In the event of an unintended technical duplicate debit or incorrect amount entered due to banking portal errors:</p>
+        <ul class="list-disc pl-5 space-y-1 mt-2">
+          <li>The donor must notify the Trust within <strong>48 hours</strong> of the transaction.</li>
+          <li>Please send your bank transfer UTR number, UPI transaction ID, bank debit proof, and donor details to <a href="mailto:connect@mahadevashramtrust.org" class="text-orange-600 font-bold underline">connect@mahadevashramtrust.org</a> or via WhatsApp to <strong>+91 99107 50090</strong>.</li>
+          <li>Upon verification by our finance committee, eligible refund requests will be reversed to the original source bank account within 7 to 10 working days.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold font-hero-serif text-slate-900 mb-3">3. Contacting the Trust for Inquiries</h2>
+        <p>If you have any questions regarding your contribution or need assistance with donation verification, please contact:<br>
+        <strong>Mahadev Ashram Charitable Trust</strong><br>
+        Pusta Road, Sainik Vihar, Sector-115, Noida, UP - 201301<br>
+        Phone: +91 99107 50090 / +91 99902 96199<br>
+        Email: connect@mahadevashramtrust.org</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark text-slate-300 py-8 px-4 text-center text-xs">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <p>Designed for Mahadev Ashram Charitable Trust • Hope For Humanity • All Rights Reserved.</p>
+      <div class="text-[11px] text-slate-400">
+        <a href="index.html" class="hover:underline">Home</a> • <a href="about.html" class="hover:underline">About</a> • <a href="our-work.html" class="hover:underline">Our Work</a> • <a href="our-member.html" class="hover:underline">Our Members</a> • <a href="donation.html" class="hover:underline">Donate</a> • <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

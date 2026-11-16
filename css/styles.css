@@ -1,0 +1,416 @@
+/* Custom styles for Mahadev Ashram Charitable Trust - Editorial NGO Design */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #f0760f;
+  --primary-hover: #d96306;
+  --dark: #22242b;
+  --dark-surface: #1a1c22;
+  --light-gray: #f4f5f7;
+  --text-main: #333333;
+  --text-muted: #666666;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-main);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Typography matching reference image */
+.font-hero-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.heading-tracked {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Reference Hero Layout */
+.hero-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Geometric Polygon Mask for NEED section */
+.polygon-need-bg {
+  background-color: #eceff1;
+}
+
+.polygon-clip-right {
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 768px) {
+  .polygon-clip-right {
+    clip-path: none;
+  }
+}
+
+.polygon-accent-triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(236, 239, 241, 0.85) 0%, rgba(236, 239, 241, 0.4) 40%, transparent 60%);
+}
+
+/* Outline Buttons matching reference */
+.btn-outline-custom {
+  border: 1px solid #d1d5db;
+  color: #374151;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.65rem 1.75rem;
+  transition: all 0.25s ease;
+  display: inline-block;
+  background: transparent;
+}
+
+.btn-outline-custom:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(240, 118, 15, 0.05);
+}
+
+.btn-primary-orange {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.65rem 1.6rem;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary-orange:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(240, 118, 15, 0.35);
+}
+
+/* Circular Hamburger Button matching reference */
+.btn-hamburger-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-hamburger-circle:hover {
+  border-color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  transform: scale(1.05);
+}
+
+.btn-hamburger-circle span {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* Gallery Carousel Controls */
+.gallery-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+}
+
+.gallery-arrow-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #fffaf5;
+}
+
+/* Tier Selection Pills */
+.tier-pill {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tier-pill.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(240, 118, 15, 0.3);
+}
+
+/* Toast Notification */
+#toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Lightbox Modal */
+.modal-overlay {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Accordion transition */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-answer.open {
+  max-height: 500px;
+  transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);
+}
+
+/* Floating Action Buttons (Bottom Right - matching screenshots) */
+.floating-actions-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.whatsapp-float-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.6);
+}
+
+.scroll-top-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f0760f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(240, 118, 15, 0.35);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background-color: #d96206;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(240, 118, 15, 0.5);
+}
+
+/* Stats Counter Banner - Sunset silhouettes of volunteers with raised hands */
+.stats-banner-bg {
+  background-image: url('../assets/images/work/volunteers-hero.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .stats-banner-bg {
+    background-attachment: scroll;
+  }
+}
+
+/* Glassmorphic Stats Metric Card */
+.stat-glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 28px 18px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-glass-card:hover {
+  transform: translateY(-6px);
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(240, 118, 15, 0.6);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), 0 0 25px rgba(240, 118, 15, 0.25);
+}
+
+/* Redesigned Testimonials Section */
+.testimonial-card-v2 {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card-v2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(240, 118, 15, 0.12);
+  border-color: #fdba74;
+}
+
+.testimonial-photo-wrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.testimonial-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-card-v2:hover .testimonial-photo-wrap img {
+  transform: scale(1.07);
+}
+
+/* ==================== MULTI-PAGE SUBPAGE STYLING ==================== */
+.page-hero-banner {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color: #1a1c22;
+}
+
+.page-hero-overlay {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(15, 23, 42, 0.95) 100%);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f0760f;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #f0760f !important;
+  font-weight: 700;
+}
+
+/* Filter Tabs for Our Work */
+.filter-tab-btn {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #475569;
+}
+
+.filter-tab-btn:hover {
+  border-color: #f0760f;
+  color: #f0760f;
+}
+
+.filter-tab-btn.active {
+  background-color: #f0760f;
+  border-color: #f0760f;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(240, 118, 15, 0.3);
+}
+
+/* Feature & Milestone Cards */
+.pillar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px 24px;
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  border-color: #fdba74;
+}
