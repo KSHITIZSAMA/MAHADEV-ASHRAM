@@ -1,0 +1,5 @@
+# Development server & legacy archive
+dev-server.js
+_legacy_archive/
+node_modules/
+*.log
