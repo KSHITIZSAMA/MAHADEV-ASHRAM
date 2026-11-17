@@ -11,6 +11,7 @@ Designed with an editorial NGO visual identity, clean glassmorphism, responsive 
 - **index.html**: Homepage with hero showcase, verified impact counters, Need highlights, photo gallery, testimonials, leadership spotlight, and donation gateway.
 - **about.html**: Trust history, mission, vision, values, 80G/12A registration credentials, and operational philosophy.
 - **our-work.html**: Interactive filterable portfolio of ground initiatives (Kanwar Seva, Vidya distribution, medical camps, Annadanam, elderly care, and women empowerment).
+- **gallery.html**: Filterable photo & media gallery showcasing authentic ground photography from Noida and transit routes with interactive fullscreen lightbox viewer.
 - **our-member.html**: Governing Board of Trustees & Volunteer Taskforce with verified executive profiles.
 - **donation.html**: Dedicated contribution portal with 1-click UPI deep links (GPay, PhonePe, Paytm, BHIM), direct bank transfer credentials, 1-click copy-to-clipboard buttons, and QR modal.
 - **contact.html**: Office locations (Sector-115 Noida Seva Camp & Sector-122 Registered Office), interactive enquiry forms, volunteer onboarding, and direct helpline links.

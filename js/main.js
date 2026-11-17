@@ -137,8 +137,8 @@ function initGalleryCarouselAndLightbox() {
     });
   }
 
-  // Lightbox click for any gallery card
-  document.querySelectorAll('.gallery-card-item').forEach(card => {
+  // Lightbox click for any gallery card or grid item
+  document.querySelectorAll('.gallery-card-item, .gallery-grid-item').forEach(card => {
     card.addEventListener('click', () => {
       const img = card.querySelector('img');
       const title = card.getAttribute('data-caption') || 'Mahadev Ashram Seva';
@@ -344,10 +344,10 @@ function initScrollTop() {
   }, { passive: true });
 }
 
-// Work Initiatives Filter Tabs
+// Work & Gallery Filter Tabs
 function initWorkFilter() {
   const filterBtns = document.querySelectorAll('.filter-tab-btn');
-  const items = document.querySelectorAll('.work-item-card');
+  const items = document.querySelectorAll('.work-item-card, .gallery-grid-item');
   if (!filterBtns.length || !items.length) return;
 
   filterBtns.forEach(btn => {
