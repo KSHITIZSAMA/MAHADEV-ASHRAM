@@ -339,10 +339,27 @@
   <section id="gallery" class="py-16 sm:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
       
-      <!-- Heading -->
-      <h2 class="heading-tracked text-2xl sm:text-3xl font-extrabold text-slate-900 text-center mb-10">
-        GALLERY
-      </h2>
+      <!-- Heading & Actions -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 pb-4 border-b border-slate-100">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-orange-100 text-orange-700 mb-2">
+            GROUND ARCHIVE
+          </span>
+          <h2 class="heading-tracked text-2xl sm:text-3xl font-extrabold text-slate-900">
+            GALLERY
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="gallery.html" class="inline-flex items-center gap-1 text-xs font-bold text-orange-600 hover:text-orange-700 uppercase tracking-wider transition">
+            <span>Explore All 18+ Photos</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <button id="index-add-media-btn" class="add-media-trigger-btn inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold text-xs uppercase tracking-wider shadow hover:shadow-lg transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+            <span>Add Media</span>
+          </button>
+        </div>
+      </div>
 
       <!-- Carousel Container with Side Arrows -->
       <div class="relative flex items-center gap-3 sm:gap-4">
@@ -1190,6 +1207,212 @@
         <img id="lightbox-img" src="" alt="Seva Preview" class="w-full max-h-[80vh] object-contain mx-auto">
         <p id="lightbox-caption" class="text-center text-white text-xs font-semibold p-3 uppercase tracking-wider"></p>
       </div>
+    </div>
+  </div>
+
+  <!-- ==================== ADMIN AUTHENTICATION MODAL ==================== -->
+  <div id="admin-auth-modal" class="fixed inset-0 z-50 modal-overlay flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100">
+      <!-- Close Button -->
+      <button type="button" id="admin-auth-close-btn" class="absolute top-4 right-4 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <!-- Trust Seal & Header -->
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mx-auto mb-3 shadow-inner">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+        </div>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest bg-orange-50 text-orange-700 border border-orange-200 mb-2">
+          Trustee &amp; Coordinator Portal
+        </span>
+        <h3 class="text-xl font-bold font-hero-serif text-slate-900">Admin Authentication</h3>
+        <p class="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
+          Publishing media is restricted to verified trustees and authorized seva coordinators of Mahadev Ashram.
+        </p>
+      </div>
+
+      <!-- Authentication Form -->
+      <form id="admin-auth-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+            Trustee Secret Key / Passcode *
+          </label>
+          <div class="relative">
+            <input type="password" id="admin-passcode-input" required autocomplete="current-password" placeholder="Enter trustee passcode" class="w-full px-4 py-3 pr-10 rounded-xl border border-slate-300 text-sm focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200 transition">
+            <button type="button" id="toggle-passcode-visibility" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-sm p-1">
+              👁️
+            </button>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-1.5 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-orange-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+            Trustee Key Hint: <span class="font-mono font-bold text-orange-700 bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200">mahadev2026</span>
+          </p>
+        </div>
+
+        <!-- Error alert message container -->
+        <div id="auth-error-msg" class="hidden p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+          <svg class="w-4 h-4 text-red-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+          <span id="auth-error-text">Incorrect passcode. Access restricted to authorized trustees.</span>
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition transform active:scale-[0.99]">
+          Verify &amp; Unlock Upload
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== UPLOAD MEDIA MODAL (AUTHENTICATED ONLY) ==================== -->
+  <div id="upload-media-modal" class="fixed inset-0 z-50 modal-overlay flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 max-h-[90vh] overflow-y-auto">
+      
+      <!-- Top Bar: Status + Logout + Close -->
+      <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-200">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">
+            <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Trustee Authenticated
+          </span>
+          <button type="button" id="admin-logout-btn" class="text-[11px] font-semibold text-slate-400 hover:text-red-600 underline transition ml-1" title="Lock admin session">
+            Lock Session
+          </button>
+        </div>
+        
+        <button type="button" id="upload-media-close-btn" class="p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Header -->
+      <div class="mb-6">
+        <h3 class="text-2xl font-bold font-hero-serif text-slate-900">Upload Seva Media</h3>
+        <p class="text-xs text-slate-500 mt-1">
+          Post ground photos or field videos directly to the public live gallery.
+        </p>
+      </div>
+
+      <!-- Upload Form -->
+      <form id="upload-media-form" class="space-y-5 text-xs">
+        
+        <!-- Media Type Selector (Photo vs Video) -->
+        <div>
+          <label class="block font-semibold text-slate-700 uppercase tracking-wider mb-2">Select Media Type *</label>
+          <div class="grid grid-cols-2 gap-3">
+            <label id="type-photo-label" class="media-type-option active flex items-center justify-center gap-2 p-3 rounded-xl border-2 border-orange-500 bg-orange-50/50 cursor-pointer text-slate-800 font-bold transition">
+              <input type="radio" name="mediaType" value="photo" checked class="hidden" id="type-photo">
+              <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              <span>Photo (Image)</span>
+            </label>
+            <label id="type-video-label" class="media-type-option flex items-center justify-center gap-2 p-3 rounded-xl border-2 border-slate-200 hover:border-slate-300 bg-white cursor-pointer text-slate-600 font-bold transition">
+              <input type="radio" name="mediaType" value="video" class="hidden" id="type-video">
+              <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              <span>Field Video</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- PHOTO UPLOAD SECTION -->
+        <div id="photo-input-section" class="space-y-3">
+          <label class="block font-semibold text-slate-700 uppercase tracking-wider">Choose Photo File or Image URL *</label>
+          
+          <!-- Dropzone File Input -->
+          <div id="photo-dropzone" class="border-2 border-dashed border-slate-300 hover:border-orange-500 rounded-2xl p-5 text-center cursor-pointer transition bg-slate-50/50 hover:bg-orange-50/20">
+            <input type="file" id="photo-file-input" accept="image/*" class="hidden">
+            <div id="photo-dropzone-prompt">
+              <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mx-auto mb-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+              </div>
+              <p class="font-bold text-slate-700 text-xs">Click or drag &amp; drop photo here</p>
+              <p class="text-[10px] text-slate-400 mt-0.5">JPG, PNG, WEBP, AVIF formats</p>
+            </div>
+            <!-- Photo Preview -->
+            <div id="photo-preview-wrap" class="hidden relative">
+              <img id="photo-preview-img" src="" alt="Selected Photo" class="max-h-48 mx-auto rounded-xl object-contain shadow">
+              <button type="button" id="remove-photo-btn" class="absolute top-1 right-1 bg-red-600 text-white rounded-full p-1.5 shadow hover:bg-red-700 text-xs">✕</button>
+            </div>
+          </div>
+
+          <!-- Or Image URL -->
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] text-slate-400 uppercase font-semibold whitespace-nowrap">Or image URL:</span>
+            <input type="url" id="photo-url-input" placeholder="https://example.com/field-photo.jpg" class="flex-1 px-3 py-2 rounded-lg border border-slate-300 text-xs focus:border-orange-500 focus:outline-none">
+          </div>
+        </div>
+
+        <!-- VIDEO UPLOAD SECTION (Hidden by default) -->
+        <div id="video-input-section" class="hidden space-y-3">
+          <label class="block font-semibold text-slate-700 uppercase tracking-wider">Choose Video File or YouTube Link *</label>
+          
+          <!-- Dropzone Video Input -->
+          <div id="video-dropzone" class="border-2 border-dashed border-slate-300 hover:border-red-500 rounded-2xl p-5 text-center cursor-pointer transition bg-slate-50/50 hover:bg-red-50/20">
+            <input type="file" id="video-file-input" accept="video/mp4,video/webm" class="hidden">
+            <div id="video-dropzone-prompt">
+              <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center mx-auto mb-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              </div>
+              <p class="font-bold text-slate-700 text-xs">Click or drag &amp; drop MP4 / WebM video</p>
+              <p class="text-[10px] text-slate-400 mt-0.5">MP4 or WebM video file</p>
+            </div>
+            <!-- Video Preview -->
+            <div id="video-preview-wrap" class="hidden relative">
+              <video id="video-preview-player" controls class="max-h-48 mx-auto rounded-xl shadow w-full"></video>
+              <button type="button" id="remove-video-btn" class="absolute top-1 right-1 bg-red-600 text-white rounded-full p-1.5 shadow hover:bg-red-700 text-xs">✕</button>
+            </div>
+          </div>
+
+          <!-- Or YouTube / Video Link -->
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] text-slate-400 uppercase font-semibold whitespace-nowrap">Or YouTube/Video Link:</span>
+            <input type="url" id="video-url-input" placeholder="https://www.youtube.com/watch?v=... or direct video link" class="flex-1 px-3 py-2 rounded-lg border border-slate-300 text-xs focus:border-red-500 focus:outline-none">
+          </div>
+        </div>
+
+        <!-- Title / Caption -->
+        <div>
+          <label class="block font-semibold text-slate-700 uppercase tracking-wider mb-1">Media Caption / Title *</label>
+          <input type="text" id="media-caption-input" required placeholder="e.g. Free Diagnostic Screening &amp; Medicine Distribution Camp" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500">
+        </div>
+
+        <!-- Category & Location Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 uppercase tracking-wider mb-1">Seva Category *</label>
+            <select id="media-category-select" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:border-orange-500 focus:outline-none bg-white">
+              <option value="health">Healthcare &amp; Clinics</option>
+              <option value="kanwar">Kanwar Pilgrim Seva</option>
+              <option value="food">Annadanam (Food Bhandara)</option>
+              <option value="education">Vidya Drive &amp; Education</option>
+              <option value="welfare">Elderly &amp; Women Empowerment</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 uppercase tracking-wider mb-1">Location / Route</label>
+            <input type="text" id="media-location-input" placeholder="e.g. Sector 115 Noida, Uttar Pradesh" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:border-orange-500 focus:outline-none">
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="publish-media-btn" class="w-full py-3.5 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition transform active:scale-[0.99] flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+          <span>Publish to Live Gallery</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== VIDEO PLAYER MODAL ==================== -->
+  <div id="video-player-modal" class="fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center p-4 hidden">
+    <button id="video-modal-close" class="absolute top-5 right-5 text-white/70 hover:text-white p-2 text-2xl font-bold z-50">
+      ✕
+    </button>
+    <div class="max-w-4xl w-full flex flex-col items-center">
+      <div id="video-container" class="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl relative">
+        <!-- Injected video or iframe -->
+      </div>
+      <p id="video-modal-caption" class="text-white text-sm sm:text-base font-medium mt-4 text-center px-4"></p>
     </div>
   </div>
 
